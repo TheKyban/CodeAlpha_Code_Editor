@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compiler</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <!-- CodeMirror -->
+    <link rel="stylesheet" href="codemirror-5.65.13/lib/codemirror.css">
+
+    <!-- THEMES -->
+    <link rel="stylesheet" href="codemirror-5.65.13/theme/dracula.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+    <div class="row m-3">
+        <div class="col">
+            <div class="d-flex justify-content-between mb-2 bg-dark rounded p-2">
+
+                <div class="col-auto w-25">
+                    <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+                    <select class="form-select" id="autoSizingSelect">
+                        <!-- <option value="C++">C++</option> -->
+                        <option value="javaScript">JS</option>
+                        <option value="python">Python</option>
+                        <!-- <option value="Java">Java</option> -->
+                    </select>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-success"><a href="/web">Go To Web Editor</a></i></button>
+
+                </div>
+                <div>
+                    <!-- <button type="button" class="btn btn-success">Coding</button> -->
+                    <button type="button" class="btn btn-success" id="run"><i class="bi bi-play-fill"></i></button>
+                </div>
+
+
+            </div>
+
+            <textarea type="text" id="editor" class="form-control" aria-label="First name"></textarea>
+        </div>
+        <div class="col d-flex flex-column rounded bg-dark px-4">
+            <div class="h-50">
+                <label for="Input" class="text-light mt-4 mb-2">Input</label>
+                <textarea id="Input" type="text" class="form-control h-75" aria-label="Last name"></textarea>
+            </div>
+            <div class="h-50">
+                <label for="Output" class="text-light mb-2">Output</label>
+                <textarea id="Output" type="text" class="form-control h-75 " aria-label="Last name"></textarea>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+
+<script src="codemirror-5.65.13/lib/codemirror.js"></script>
+
+<!-- Language Support -->
+<script src="codemirror-5.65.13/mode/javascript/javascript.js"></script> <!-- JavaScript-->
+<script src="codemirror-5.65.13/mode/python/python.js"></script> <!-- Python-->
+<script src="codemirror-5.65.13/mode/clike/clike.js"></script> <!-- C,C++,Java,more -->
+
+<!-- Addons -->
+<script src="codemirror-5.65.13/addon/edit/closebrackets.js"></script>
+
+
+<script src="scripts/script.js"></script>
+
+</html>
